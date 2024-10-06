@@ -10,6 +10,8 @@ const username = faker.internet.userName({ firstname: firstname, lastname: lastn
 
 <template>
   <!-- {{ fullname }}<br /> -->
+    
+    <RouterLink :to="{name: 'CardDetails', params: {id: username}}">
      <div class="border border-pink-400 rounded-lg shadow-lg bg-pink-200 h-full overflow-hidden">
       <img :src="faker.image.urlLoremFlickr({ width: 640, height: 480, category: 'desserts'})" class ="rounded-t-xl"/>
      <div class="p-4">
@@ -18,5 +20,5 @@ const username = faker.internet.userName({ firstname: firstname, lastname: lastn
         <p class="mb-3 font-normal text-pink-600">{{ bio }}</p>
       </div>
     </div>
-
+</RouterLink>
 </template>
